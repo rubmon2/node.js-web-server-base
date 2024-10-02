@@ -1,9 +1,12 @@
-const express=require("express")
-const path = require("path")
+import express from "express"
+import path  from "path"
+// const express=require("express")
+
+// const path = require("path")
 
 
-const startServer=(option)=>{
-    const {port, public_path=public}=option
+export const startServer=(option)=>{
+    const {port, public_path="public"}=option
 
     const app=express()
 //usamos el middleware  y definimos que carpeta public este disponible
@@ -22,6 +25,6 @@ app.listen(port,()=>{console.log("app escuchando en el puerto", port)})
 }
 
 
-module.exports={
-    startServer
-}
+// module.exports={
+//     startServer
+// }
